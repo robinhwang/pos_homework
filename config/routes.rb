@@ -4,6 +4,8 @@ PosHomework::Application.routes.draw do
   end
 
   resources :users
+  resources :products
+  resources :orders
 
   root :to => "home#index"
   # The priority is based upon order of creation:
