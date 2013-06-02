@@ -1,6 +1,11 @@
 PosHomework::Application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    get 'users/signout' => "devise/sessions#destroy"
+  end
 
+  resources :users
+
+  root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
