@@ -1,4 +1,3 @@
 class Product < ActiveRecord::Base
-  # attr_accessible :title, :body
-  belongs_to :order
+  has_many :line_items
 end

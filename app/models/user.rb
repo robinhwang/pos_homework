@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   has_many :orders, :inverse_of => :user
-  has_many :products, :through => :orders
+  has_many :line_items, :through => :orders
 end

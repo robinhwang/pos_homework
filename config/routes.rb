@@ -1,4 +1,7 @@
 PosHomework::Application.routes.draw do
+  resources :line_items
+
+
   devise_for :users do
     get 'users/signout' => "devise/sessions#destroy"
   end
