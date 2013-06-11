@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(:version => 20130610112748) do
 
   create_table "orders", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "number",      :null => false
     t.float    "total_price"
     t.string   "note"
     t.datetime "created_at",  :null => false

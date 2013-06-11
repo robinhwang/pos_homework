@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
   attr_accessible :title, :price, :intro
-  validates :title, :price, :intor, presence: true
+  validates :title, :price, :intro, presence: true
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   validates :title, uniqueness: true
 

@@ -1,5 +1,13 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
+<h2>Your order</h2>
 
+<ul>
+  <% @order.line_items.each do |item| %>
+    <li><%= item.product.title %> </li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_line_item_path(@line_item) %> |
 <%= link_to 'Back', line_items_path %>
