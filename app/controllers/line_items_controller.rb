@@ -42,7 +42,7 @@ class LineItemsController < ApplicationController
   def create
     @order = current_order
     product = Product.find(params[:product_id])
-    @line_item = @order.line_items.add_product(product.id)
+    @line_item = @order.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save

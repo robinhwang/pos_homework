@@ -9,11 +9,16 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @order}
+    begin
+      @order = Order.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attempt to access invalid order #{params[:id]}"
+      redirect_to home_url, notice: "invalid order"
+    else
+      respond_to do |format|
+        format.html
+        format.json { render json: @order}
+      end
     end
   end
 
@@ -59,12 +64,13 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-    @order = Order.find(params[:id])
+    @order = current_order
     @order.destroy
+    session[:order_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to products_path }
-      format.json { head :no_content}
+      format.html { redirect_to home_url, notice: 'You empty your cart' }
+      format.json { head :ok}
     end
   end
 end

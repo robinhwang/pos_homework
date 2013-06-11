@@ -6,6 +6,13 @@
 
 <ul>
   <% @order.line_items.each do |item| %>
-    <li><%= item.product.title %></li>
+    <li><%= item.product.title %> * <%= item.quantity %></li>
+    <li></li>
   <% end %>
 </ul>
+
+<div class="total">
+  Total price is  <%= number_to_currency(@order.order_price) %>
+</div>
+
+<%= button_to 'Empty the order', @order, method: :delete, confirm: "R U sure, babe?" %>
