@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
       end
     end
   end
-  
+
   def update
     @order = Order.find(params[:id])
 
