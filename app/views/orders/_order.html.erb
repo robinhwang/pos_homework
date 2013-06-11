@@ -1,0 +1,10 @@
+
+<h2>Your Order</h2>
+
+<%= render order.line_items %>
+
+<div class="total">
+  Total price is  <%= number_to_currency(order.order_price) %>
+</div>
+
+<%= button_to 'Empty the order', order, method: :delete, confirm: "R U sure, babe?" %>
