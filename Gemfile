@@ -1,5 +1,4 @@
-source 'https://rubygems.org'
-
+source 'http://ruby.sdutlinux.org/'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -19,6 +18,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'railroady'
+  gem "rails-erd"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
