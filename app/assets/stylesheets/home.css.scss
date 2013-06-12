@@ -2,5 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #homepage {
-
+  .left {
+    position: fixed;
+    left: -220px;
+    width: 700px;
+    height: 700px;
+  }
+  pre {
+    font-size: 25px;
+    line-height: 35px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+  }
+  form {
+    position: absolute;
+    top: 500px;
+    right: 600px;
+  }
+  .large {
+    width: 150px;
+    height: 80px;
+    font-size: 23px;
+  }
 }

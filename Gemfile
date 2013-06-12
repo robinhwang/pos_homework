@@ -20,7 +20,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'railroady'
+  gem 'railroady' #this one is better
   gem "rails-erd"
 end
 
