@@ -20,13 +20,8 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body id="show">
-    <div class="order">
-      <%= render @order %>
-    </div>
+  <body>
     <%= yield %>
-
-    
     <%= javascript_include_tag "application" %>
   </body>
 </html>
