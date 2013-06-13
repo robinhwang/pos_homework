@@ -49,6 +49,7 @@ passwd: test1234
         <% else %>
           <%= button_to "登录", new_user_session_path, class: "large button" %>
         <% end %>
+        <%= javascript_include_tag :defaults %>
       </div>
     </body>
   </body>
