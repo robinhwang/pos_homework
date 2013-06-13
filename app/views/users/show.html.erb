@@ -1,1 +1,7 @@
-<p class="user-show">your email is <%= current_user.email %></p>
+<p class="user-show">
+  your email is <%= current_user.email %> <br>
+  <%= link_to "Product management", products_path, class: "button first" %> 
+  <%= link_to "User management", users_path, class: :button %> <br>
+  <%= link_to "check the Order", orders_path, class: :button %> 
+
+</p>

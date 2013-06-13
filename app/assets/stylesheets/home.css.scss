@@ -41,6 +41,13 @@
   left: 40%;
   top: 20%;
   font-size: 18px;
+  a {
+    float: left;
+    clear: both;
+  }
+  .first {
+    margin-top: 100px;
+  }
 }
 
 .product {

@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all
+    @products = Product.order(:title)
+    @order = current_order
 
     respond_to do |format|
       format.html
