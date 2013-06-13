@@ -1,4 +1,4 @@
-<h2>Sign in</h2>
+<h2 class="header1">Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name),:html => { class: :signin} ) do |f| %>
   <div><%= f.label :email %><br />
@@ -14,6 +14,3 @@
   <div><%= f.submit "Sign in" %></div>
 <% end %>
 
-<div class="links">
-  <%= render "devise/shared/links" %>
-</div>

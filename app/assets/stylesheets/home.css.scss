@@ -15,7 +15,7 @@
     top: 100px;
     right: 100px;
   }
-  form {
+  .large {
     position: absolute;
     top: 500px;
     right: 600px;
@@ -32,3 +32,18 @@
   max-width: 200px;
 }
 
+.header1 {
+  text-align: center;
+}
+
+.user-show {
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  font-size: 18px;
+}
+
+.product {
+  max-width: 500px;
+  margin:auto;
+}

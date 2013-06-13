@@ -24,7 +24,7 @@
           <li class="divider hide-for-small"></li>
           <% if user_signed_in? %>
             <li> <%= link_to current_user.email, user_path(current_user)  %> </li>
-            <li> <%= link_to "Log out", destroy_user_session_path %> </li>
+            <li> <%= link_to "Log out", destroy_user_session_path, method: :delete %> </li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path %></li>
           <% end %>
@@ -38,13 +38,17 @@
           说明
 1.左边是ER图
 2.测试系统使用帐号密码
-username: test
-passwd: 123456
+username: test@gmail.com
+passwd: test1234
 
 3.网站基于 Rails 框架搭建
 4.还是有点简陋，功能会继续完善
         </pre>
-        <%= button_to "登录", new_user_session_path, class: "large button" %>
+        <% if user_signed_in? %>
+          <%= link_to "管理", user_path(current_user) , class: "large button" %>
+        <% else %>
+          <%= button_to "登录", new_user_session_path, class: "large button" %>
+        <% end %>
       </div>
     </body>
   </body>
