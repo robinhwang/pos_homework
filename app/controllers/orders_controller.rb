@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
     session[:order_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to home_url, notice: 'You empty your cart' }
+      format.html { redirect_to home_url, notice: 'You empty your order' }
       format.json { head :ok}
     end
   end

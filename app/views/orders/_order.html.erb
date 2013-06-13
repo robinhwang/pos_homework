@@ -4,7 +4,16 @@
 <%= render order.line_items %>
 
 <div class="total">
+  
+  <% if order.vip %>
+    You can have a discount
+  <% else %>
+    You cannot give this order a discount
+  <% end %>
+  <br>
   Total price is  <%= number_to_currency(order.order_price) %>
 </div>
 
 <%= button_to 'Empty the order', order, method: :delete, confirm: "R U sure, babe?" %>
+<button><%= link_to "Check it", order_path(order) %> </button>
+<button onClick="javascript:window.print();">打印</button>

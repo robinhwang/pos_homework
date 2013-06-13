@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610112748) do
+ActiveRecord::Schema.define(:version => 20130613121748) do
 
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20130610112748) do
     t.integer  "user_id"
     t.float    "total_price"
     t.string   "note"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "vip",         :default => false
   end
 
   create_table "products", :force => true do |t|
