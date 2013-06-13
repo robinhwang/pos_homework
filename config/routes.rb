@@ -10,7 +10,8 @@ PosHomework::Application.routes.draw do
   resources :products
   resources :orders
 
-  root :to => "home#index", as: :home
+  root :to => "home#enter"
+  get "home", to: "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
